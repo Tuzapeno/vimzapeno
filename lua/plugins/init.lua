@@ -46,9 +46,4 @@ return {
     "tpope/vim-fugitive",
     lazy = false,
   },
-  -- Git signs
-  {
-    "lewis6991/gitsigns.nvim",
-    lazy = false,
-  },
 }
