@@ -46,4 +46,14 @@ return {
     "tpope/vim-fugitive",
     lazy = false,
   },
+  -- Project manager
+  {
+    "ahmedkhalf/project.nvim",
+    lazy = false,
+    config = function()
+      require("project_nvim").setup {
+        require("telescope").load_extension "projects",
+      }
+    end,
+  },
 }
