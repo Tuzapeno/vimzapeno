@@ -1,7 +1,11 @@
 vim.g.base46_cache = vim.fn.stdpath "data" .. "/base46/"
 vim.g.mapleader = " "
 
-vim.o.shell = "powershell.exe"
+if vim.fn.has "win32" then
+  vim.o.shell = "powershell.exe"
+else
+  vim.o.shell = "bash"
+end
 
 -- bootstrap lazy and all plugins
 local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
