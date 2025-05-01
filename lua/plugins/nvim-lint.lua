@@ -1,4 +1,5 @@
 return {
+    -- Plugin for linting code
     "mfussenegger/nvim-lint",
     event = {
         "BufReadPre",
