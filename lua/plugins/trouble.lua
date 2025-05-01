@@ -1,4 +1,5 @@
 return {
+    -- Plugin for displaying diagnostics, references, and other information in a window
     "folke/trouble.nvim",
     cmd = "Trouble",
     keys = {
