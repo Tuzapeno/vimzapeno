@@ -31,13 +31,13 @@ local float_opts = {
 
 local vertical_opts = {
     pos = "vsp",
-    size = 0.5,
+    size = 0.3,
     id = "verticalTerminal",
 }
 
 local horizontal_opts = {
     pos = "sp",
-    size = 0.5,
+    size = 0.3,
     id = "horizontalTerminal",
 }
 
