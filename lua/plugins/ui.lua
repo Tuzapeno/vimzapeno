@@ -49,7 +49,7 @@ map({ "n", "t" }, "<A-v>", function()
     require("nvchad.term").toggle(vertical_opts)
 end, { desc = "Open vertical terminal" })
 
-map({ "n", "t" }, "<A-h>", function()
+map({ "n", "t" }, "<A-t>", function()
     require("nvchad.term").toggle(horizontal_opts)
 end, { desc = "Open horizontal terminal" })
 
