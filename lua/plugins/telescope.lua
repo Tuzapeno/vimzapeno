@@ -1,0 +1,45 @@
+return {}
+-- local keys = {
+-- 	{ "<leader>ff", "<cmd>Telescope find_files<CR>", desc = "Fuzzy find files in cwd" },
+-- 	{ "<leader>fr", "<cmd>Telescope oldfiles<CR>", desc = "Fuzzy find recent files" },
+-- 	{ "<leader>fg", "<cmd>Telescope live_grep<CR>", desc = "Find string in cwd" },
+-- 	{ "<leader>fc", "<cmd>Telescope grep_string<CR>", desc = "Find string under cursor in cwd" },
+-- }
+--
+-- return {
+-- 	-- Telescope (fzf)
+-- 	"nvim-telescope/telescope.nvim",
+-- 	branch = "0.1.x",
+-- 	dependencies = {
+-- 		{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+-- 		"nvim-telescope/telescope-ui-select.nvim",
+-- 	},
+-- 	cmd = { "Telescope" },
+-- 	lazy = true,
+-- 	keys = keys, -- lazy load on keys
+-- 	config = function()
+-- 		local telescope = require("telescope")
+-- 		local actions = require("telescope.actions")
+--
+-- 		telescope.setup({
+-- 			defaults = {
+-- 				mappings = {
+-- 					i = { ["<C-j>"] = actions.move_selection_next,
+-- 						["<C-k>"] = actions.move_selection_previous,
+-- 						["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
+-- 					},
+-- 				},
+-- 				file_ignore_patterns = { "node_modules", ".git" },
+-- 			},
+-- 		})
+--
+-- 		telescope.load_extension("fzf") -- fast
+-- 		telescope.load_extension("ui-select") -- ui for selection
+--
+-- 		local keymap = vim.keymap
+--
+-- 		for _, v in ipairs(keys) do
+-- 			keymap.set("n", v[1], v[2], { desc = v.desc })
+-- 		end
+-- 	end,
+-- }
