@@ -8,4 +8,8 @@ return {
         timeout = 1,
         maxkeys = 5,
     },
+    config = function()
+        require("showkeys").setup()
+        vim.cmd("ShowkeysToggle")
+    end,
 }
