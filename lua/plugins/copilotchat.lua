@@ -17,6 +17,9 @@ return {
 
         local copilotc = require("CopilotChat")
 
+        -- Sets notification callback
+        conf.callback = notify_user
+
         -- Add custom providers
         local custom_providers = require("config.chat_providers")
         for name, provider_config in pairs(custom_providers) do
@@ -36,7 +39,6 @@ return {
         prompts = require("config.custom_prompts"),
         question_header = " You ",
         answer_header = "  AI ",
-        callback = notify_user,
     },
     keys = {
         {
