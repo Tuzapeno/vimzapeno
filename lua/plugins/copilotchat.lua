@@ -1,3 +1,13 @@
+-- Send notification to user when response is ready and the user
+-- currently has the chat window closed.
+local notify_user = function(text)
+    local buffer = vim.fn.bufnr("copilot-chat", false)
+    local window_id = vim.fn.bufwinid(buffer)
+    if window_id == -1 then
+        vim.notify("  Your response is ready: " .. string.sub(text, 1, 50))
+    end
+end
+
 return {
     -- Adds a copilot chat with support to any AI provider aswell as local models
     "CopilotC-Nvim/CopilotChat.nvim",
@@ -5,15 +15,18 @@ return {
         conf = conf or {}
         conf.providers = conf.providers or {}
 
+        local copilotc = require("CopilotChat")
+
         -- Add custom providers
         local custom_providers = require("config.chat_providers")
         for name, provider_config in pairs(custom_providers) do
             conf.providers[name] = provider_config
         end
 
-        require("CopilotChat").setup(conf)
+        copilotc.setup(conf)
     end,
-    build = "make tiktoken", -- Only on MacOS or Linux
+    -- Only in Linux and MacOS
+    build = vim.fn.has("mac") or vim.fn.has("unix") and "make tiktoken" or nil,
     lazy = true,
     cmd = {
         "CopilotChat",
@@ -21,6 +34,9 @@ return {
     },
     opts = {
         prompts = require("config.custom_prompts"),
+        question_header = " You ",
+        answer_header = "  AI ",
+        callback = notify_user,
     },
     keys = {
         {
