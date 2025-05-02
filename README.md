@@ -24,6 +24,7 @@ This configuration bundles a curated list of plugins to enhance the Neovim exper
 *   **windwp/nvim-autopairs**: Automatically pairs brackets, quotes, etc. `() {} [] "" ''`
 *   **kylechui/nvim-surround**: Manage surrounding characters (quotes, brackets). 🔄
 *   **ThePrimeagen/harpoon**: File/buffer navigation utility. ⚓
+*   **ThePrimeagen/refactoring.nvim**: Refactoring tools. 🛠️
 
 ### Git Integration
 
@@ -49,10 +50,12 @@ This configuration bundles a curated list of plugins to enhance the Neovim exper
 *   **CopilotC-Nvim/CopilotChat.nvim**: Large language models chat integration. 💬
 *   **github/Copilot.nvim**: GitHub Copilot integration. 🧑‍✈️
 
+### Fun
+*   **nvzone/typr**: Typing practice plugin. ⌨️
+*   **nvzone/timerly**: Timer plugin. ⏱️
+*   **eandrju/cellular-automaton.nvim**: Play animations in Neovim 🧬
+
 ### Miscellaneous
 
 *   **folke/snacks.nvim**: Collection of QoL plugins. 🍿
-*   **nvzone/typr**: Typing practice plugin. ⌨️
-*   **nvzone/timerly**: Timer plugin. ⏱️
-*   **ThePrimeagen/refactoring.nvim**: Refactoring tools. 🛠️
 *   **folke/lazydev.nvim**: Configures LuaLS for better plugin editing 🌛
