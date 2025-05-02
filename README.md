@@ -54,6 +54,7 @@ This configuration bundles a curated list of plugins to enhance the Neovim exper
 *   **nvzone/typr**: Typing practice plugin. ⌨️
 *   **nvzone/timerly**: Timer plugin. ⏱️
 *   **eandrju/cellular-automaton.nvim**: Play animations in Neovim 🧬
+*   **vuciv/golf**: Add keystroke minigames. ⛳
 
 ### Miscellaneous
 
