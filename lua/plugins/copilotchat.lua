@@ -14,7 +14,7 @@ return {
         require("CopilotChat").setup(conf)
     end,
     build = "make tiktoken", -- Only on MacOS or Linux
-    lazy = false,
+    lazy = true,
     cmd = {
         "CopilotChat",
         "CopilotChatPrompts",

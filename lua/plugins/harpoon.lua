@@ -4,7 +4,6 @@ return {
     branch = "harpoon2",
     lazy = true,
     event = "VeryLazy",
-    -- TODO: i need to configure the keymaps properly, and lazy load it
     config = function()
         local harpoon = require("harpoon")
 
@@ -35,14 +34,5 @@ return {
         vim.keymap.set("n", "<A-l>", function()
             harpoon:list():select(4)
         end, { desc = "󰛢 Select 4th file in Harpoon" })
-
-        -- Toggle previous & next buffers stored within Harpoon list
-        -- vim.keymap.set("n", "<C-S-P>", function()
-        --     harpoon:list():prev()
-        -- end)
-        --
-        -- vim.keymap.set("n", "<C-S-N>", function()
-        --     harpoon:list():next()
-        -- end)
     end,
 }

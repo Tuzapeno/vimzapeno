@@ -9,10 +9,10 @@ map("n", "<C-j>", "<C-w>j", { desc = "switch window down" })
 map("n", "<C-k>", "<C-w>k", { desc = "switch window up" })
 
 -- Scroll and center cursor position
-map("n", "<C-d>", "<C-d>zz", { desc = "scroll down and center cursor" })
-map("n", "<C-u>", "<C-u>zz", { desc = "scroll up and center cursor" })
-map("n", "<C-F>", "<C-F>zz", { desc = "scroll down and center cursor" })
-map("n", "<C-B>", "<C-B>zz", { desc = "scroll up and center cursor" })
+map("n", "<C-d>", "zz<C-d>zz", { desc = "scroll down and center cursor" })
+map("n", "<C-u>", "zz<C-u>zz", { desc = "scroll up and center cursor" })
+map("n", "<C-F>", "zz<C-F>zz", { desc = "scroll down and center cursor" })
+map("n", "<C-B>", "zz<C-B>zz", { desc = "scroll up and center cursor" })
 
 -- Center and select word while searching
 map("n", "n", "nzzzv")
