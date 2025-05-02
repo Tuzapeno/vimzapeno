@@ -1,6 +1,5 @@
 ----- This file is for customizing the base46 and UI settings that come with both nvchad/ui and nvchad/base46 plugins
 
----@type ChadrcConfig
 local M = {}
 
 M.base46 = {
