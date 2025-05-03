@@ -29,7 +29,7 @@ return {
         copilotc.setup(conf)
     end,
     -- Only in Linux and MacOS
-    build = vim.fn.has("mac") or vim.fn.has("unix") and "make tiktoken" or nil,
+    build = (vim.fn.has("mac") or vim.fn.has("unix")) and "make tiktoken" or nil,
     lazy = true,
     cmd = {
         "CopilotChat",
