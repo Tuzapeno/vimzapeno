@@ -22,14 +22,12 @@ return {
                 { section = "startup" },
             },
         },
-        explorer = { enabled = false }, -- 
         input = { enabled = true }, -- 
-        picker = {
+        picker = { -- 
             enabled = true,
             ui_select = true,
-        }, -- 
+        },
         notifier = { enabled = true }, -- 
-        scroll = { enabled = true }, -- 
         lazygit = { enabled = true }, -- 
         zen = { enabled = true }, -- 
     },
@@ -69,18 +67,9 @@ return {
             desc = "Zen Mode",
         },
 
-        -- ======================= EXPLORER =====================
-        {
-            "<C-n>",
-            function()
-                require("snacks").explorer.open()
-            end,
-            desc = "Toggle Explorer",
-        },
-
         -- ======================= PICKER =======================
 
-        -- Top Pickers & Explorer
+        -- Top Pickers
         {
             "<leader><space>",
             function()
@@ -101,13 +90,6 @@ return {
                 require("snacks").picker.notifications()
             end,
             desc = "Notification History",
-        },
-        {
-            "<leader>e",
-            function()
-                require("snacks").explorer()
-            end,
-            desc = "File Explorer",
         },
         {
             "<leader>ff",

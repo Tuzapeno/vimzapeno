@@ -19,8 +19,11 @@ map("n", "n", "nzzzv")
 map("n", "N", "Nzzzv")
 
 -- Move selected lines up and down
-map("v", "J", ":m '>+1<CR>gv=gv", { silent = true })
-map("v", "K", ":m '<-2<CR>gv=gv", { silent = true })
+map("v", "J", ":m '>+1<CR>gv=gv", { silent = true, desc = "move selected lines down" })
+map("v", "K", ":m '<-2<CR>gv=gv", { silent = true, desc = "move selected lines up" })
+
+-- Goto start of line
+map("n", "0", "^", { desc = "goto start of line" })
 
 -- ================== FILES ==================
 
