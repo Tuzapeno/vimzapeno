@@ -11,6 +11,17 @@ end
 return {
     -- Adds a copilot chat with support to any AI provider aswell as local models
     "CopilotC-Nvim/CopilotChat.nvim",
+    init = function()
+        -- Cleanup buffers when reloading plugin
+        local chat = vim.fn.bufnr("copilot-overlay", false)
+        local overlay = vim.fn.bufnr("copilot-chat", false)
+        if chat ~= -1 then
+            vim.api.nvim_buf_delete(chat, { force = true })
+        end
+        if overlay ~= -1 then
+            vim.api.nvim_buf_delete(overlay, { force = true })
+        end
+    end,
     config = function(_, conf)
         conf = conf or {}
         conf.providers = conf.providers or {}
@@ -21,7 +32,7 @@ return {
         conf.callback = notify_user
 
         -- Add custom providers
-        local custom_providers = require("config.chat_providers")
+        local custom_providers = require("config.chat_providers") or {}
         for name, provider_config in pairs(custom_providers) do
             conf.providers[name] = provider_config
         end
@@ -37,8 +48,9 @@ return {
     },
     opts = {
         prompts = require("config.custom_prompts"),
+        system_prompt = require("config.system_prompt"),
         question_header = " You ",
-        answer_header = "  AI ",
+        answer_header = "  Tuzapenion ",
     },
     keys = {
         {

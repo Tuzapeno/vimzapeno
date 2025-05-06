@@ -4,10 +4,10 @@ return {
         context = "git:staged",
         description = "Write a commit message based on staged changes",
     },
-    BugHunt = {
+    Quickfix = {
         prompt = "Don't just fix the immediate issue. Identify the underlying root cause by: 1. Examining potential architectural problems 2. Considering edge cases that might trigger this 3. Suggesting a comprehensive solution that prevents similar issues Focus on fixing the core problem, not just the symptom. Before giving a solution, give me a reasoned analysis about why and how you're fixing the root cause. Analyze this error/bug:",
-        description = "Find root of bug, (copies from CLIPBOARD)",
-        context = { "register", "buffer" },
+        description = "Fix your code",
+        context = { "quickfix", "buffer" },
     },
     ExplainGeneration = {
         "Can you explain what you generated in detail: 1. What is the purpose of this section? 2. How does it work step-by-step? 3. What alternatives did you consider and why did you choose this one? ",
