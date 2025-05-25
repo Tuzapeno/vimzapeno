@@ -8,16 +8,12 @@ local on_attach = function(_, bufnr)
 
     -- This one comes from Nvchad UI plugin
     opts.desc = "Smart rename"
-    keymap.set("n", "<leader>rn", require("nvchad.lsp.renamer"), opts)
+    keymap.set("n", "<leader>rn", function()
+        vim.lsp.buf.rename(vim.fn.input("New name:"))
+    end, opts)
 
     opts.desc = "Show line diagnostics"
     keymap.set("n", "<leader>d", vim.diagnostic.open_float, opts)
-
-    opts.desc = "Go to previous diagnostic"
-    keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
-
-    opts.desc = "Go to next diagnostic"
-    keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
 
     opts.desc = "Show documentation for what is under the cursor"
     keymap.set("n", "K", vim.lsp.buf.hover, opts)

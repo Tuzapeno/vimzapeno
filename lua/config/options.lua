@@ -34,9 +34,6 @@ o.splitright = true
 o.timeoutlen = 400
 o.undofile = true
 
--- use the cursor as a block
-vim.opt.guicursor = "i:block"
-
 -- interval for writing swap file to disk, also used by gitsigns
 o.updatetime = 250
 

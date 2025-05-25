@@ -27,7 +27,7 @@ return {
             enabled = true,
             ui_select = true,
         },
-        notifier = { enabled = true }, -- 
+        notifier = { enabled = false }, -- 
         lazygit = { enabled = true }, -- 
         zen = { enabled = true }, -- 
     },

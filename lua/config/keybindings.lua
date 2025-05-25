@@ -2,6 +2,12 @@ local map = vim.keymap.set
 
 -- ================= NAVIGATION =================
 
+-- Navigate in insert mode
+map("i", "<A-h>", "<Left>", { desc = "move cursor left" })
+map("i", "<A-l>", "<Right>", { desc = "move cursor right" })
+map("i", "<A-j>", "<Down>", { desc = "move cursor down" })
+map("i", "<A-k>", "<Up>", { desc = "move cursor up" })
+
 -- Quick window switch
 map("n", "<C-h>", "<C-w>h", { desc = "switch window left" })
 map("n", "<C-l>", "<C-w>l", { desc = "switch window right" })
