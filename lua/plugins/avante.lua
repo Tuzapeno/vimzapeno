@@ -19,6 +19,6 @@ return {
         },
     },
     keys = {
-        { "<leader>al", "<cmd>AvanteClear<cr>", desc = "Clear the chat window" },
+        { "<leader>al", "<CMD>AvanteClear<CR>", desc = "Clear the chat window" },
     },
 }
