@@ -3,7 +3,7 @@
 local M = {}
 
 M.base46 = {
-    theme = "catppuccin",
+    theme = "gruvbox",
 }
 
 M.ui = {

@@ -22,7 +22,7 @@ vim.api.nvim_create_autocmd("VimEnter", {
 return {
     "nvim-tree/nvim-tree.lua",
     lazy = true,
-    keys = { { "<C-n>", "<cmd>NvimTreeToggle<CR>", desc = "Toggle NvimTree" } },
+    -- keys = { { "<C-n>", "<cmd>NvimTreeToggle<CR>", desc = "Toggle NvimTree" } },
     cmd = { "NvimTreeToggle" },
     opts = {
         sort = { sorter = "name" },
@@ -41,6 +41,6 @@ return {
 
         local api = require("nvim-tree.api")
 
-        vim.keymap.set("n", "<C-n>", api.tree.toggle, opts("Toggle NvimTree"))
+        -- vim.keymap.set("n", "<C-n>", api.tree.toggle, opts("Toggle NvimTree"))
     end,
 }
